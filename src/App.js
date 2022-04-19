@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import Box from './component/Box'
 
@@ -24,15 +25,19 @@ const choice = {
 }
 
 function App() {
+  const [userSelect, setUserSelect] = useState(null)
+
   const play = (userChoice) => {
+    setUserSelect(choice[userChoice])
+
     console.log('chosen', userChoice)
   }
 
   return (
     <div>
       <div className='main'>
-        <Box title='You' />
-        <Box title='Computer' />
+        <Box title='You' item={userSelect} />
+        {/* <Box title='Computer' /> */}
       </div>
       <div className='main'>
         <button
