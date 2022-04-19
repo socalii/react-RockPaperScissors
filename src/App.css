@@ -13,3 +13,17 @@
 .item-img {
   width: 200px;
 }
+
+.win {
+  border: 5px solid green;
+  color: green;
+}
+
+.lose {
+  border: 5px solid red;
+  color: red;
+}
+.draw {
+  border: 5px solid black;
+  color: black;
+}
